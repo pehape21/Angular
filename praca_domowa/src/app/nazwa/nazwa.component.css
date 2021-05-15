@@ -1,0 +1,65 @@
+
+
+#header{
+
+  text-align: center;
+
+}
+li{
+  list-style: none;
+  color: white;
+
+}
+
+
+h1{
+  color: white;
+}
+#edit{
+  background-color: red;
+  color:white;
+  padding:10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+#add{
+  background-color: chartreuse;
+  color:white;
+  padding:10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+#delete{
+  background-color: black;
+  color:white;
+  padding:10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+
+
+input, select {
+  width: 50%;
+  padding: 5px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+label{
+  color: white;
+}
+
+
+#add_player{
+  text-align: center;
+}

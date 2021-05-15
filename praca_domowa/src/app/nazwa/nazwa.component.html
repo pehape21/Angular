@@ -1,0 +1,67 @@
+<div id="header">
+<h1>{{name}} </h1>
+<ul>
+  <li>Kraj: {{country}}</li>
+  <li>Rok założenia: {{age}}</li>
+    <li>Mistrzostwo Hiszpanii:{{game.la_liga}}</li>
+  <li>Puchar Króla:{{game.copa_del_rey}}</li>
+  <li>Superpuchar Hiszpanii:{{game.supercopa_de_espana}}</li>
+  <li>Liga Mistrzów: {{game.champions_legaue}}</li>
+  <li>Liga Europy: {{game.europe_league}}</li>
+  <li>Superpuchar Europy: {{game.europe_supercup}}</li>
+</ul>
+
+  <div>
+    <button (click)="EditData()" id="edit">Edytuj trofea klubu</button>
+  </div>
+  <div *ngIf="editData">
+    <h1>Edytuj:</h1>
+    <form>
+
+      <div>
+        <div id="name"><label for="la_liga">La liga:</label></div>
+        <input type="number" [(ngModel)]="game.la_liga" name="la_liga">
+      </div>
+      <div>
+        <div><label for="copa_del_rey">Puchar Króla:</label></div>
+        <input type="number" [(ngModel)]="game.copa_del_rey" name="copa_del_rey">
+      </div>
+      <div>
+        <div><label for="supercopa_de_espana">Superpuchar Hiszpanii:</label></div>
+        <input type="number" [(ngModel)]="game.supercopa_de_espana" name="supercopa_de_espana">
+      </div>
+      <div>
+        <div><label for="champions_league">Liga mistrzów:</label></div>
+        <input type="number" [(ngModel)]="game.champions_legaue" name="champions_league">
+      </div>
+      <div>
+        <div><label for="europe_league">Liga europy:</label></div>
+        <input type="number" [(ngModel)]="game.europe_league" name="europe_league">
+      </div>
+      <div>
+        <div><label for="europe_supercup">Superpuchar Europy:</label></div>
+        <input type="number" [(ngModel)]="game.europe_supercup" name="europe_supercup">
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div id="add_player">
+<form (submit)="addPlayer(task.value)">
+  <div>
+    <label for="taskfield">Piłkarz:</label>
+    <input type="text" #task id="taskfield">
+  </div>
+</form>
+
+<button (click)="addPlayer(task.value)" id="add">Dodaj piłkarza</button>
+
+
+<ul>
+  <li *ngFor="let task of player; let i = index">
+   <button (click)="deletePlayer(task)" id="delete">Usuń piłkarza</button> {{i+1}}. {{task}}
+  </li>
+</ul>
+</div>
+
